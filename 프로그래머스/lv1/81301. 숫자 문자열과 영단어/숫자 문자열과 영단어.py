@@ -1,6 +1,6 @@
 def solution(s):
     answer = 0
-    num_alpha_dict = {
+    alpha_num_dict = {
         'zero' : '0',
         'one' : '1',
         'two' : '2',
@@ -12,8 +12,7 @@ def solution(s):
         'eight' : '8',
         'nine' : '9',
     }
-    for num in num_alpha_dict.keys():
-        if num in s:
-            s = s.replace(num, num_alpha_dict[num])
+    for alpha, num in alpha_num_dict.items():
+        s = s.replace(alpha, num)
     answer = int(s)
     return answer
